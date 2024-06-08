@@ -1,20 +1,20 @@
 export const experiences = [
   {
     id: 1,
-    title: 'Software Engineer I',
-    company: "Teton Private Ltd.",
-    duration: "(Jan 2022 - Present)"
+    title: "UI / UX DESIGNER",
+    company: "Figma, Adobe XD, Balsamiq, Sketch, Maze ",
+    duration: "(DESIGNER)",
   },
   {
     id: 2,
-    title: "FullStack Developer",
-    company: "Fiverr (freelance)",
-    duration: "(Jun 2021 - Jan 2022)"
+    title: "Web Daveloper",
+    company: "HTML , CSS, Js, Php, Python, Ruby",
+    duration: "(PROGRAMMER)",
   },
   {
     id: 3,
-    title: "Self Employed",
-    company: "Code and build something in everyday.",
-    duration: "(Jan 2018 - Present)"
-  }
-]
+    title: "Mobile App Daveloper",
+    company: "Java, Python, JavaScript, Swift, Dart, Kotlin, Golang",
+    duration: "(PROGRAMMER)",
+  },
+];

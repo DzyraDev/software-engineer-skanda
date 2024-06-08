@@ -37,3 +37,37 @@ body {
   // padding-top: calc(var(--index) * 2.5rem);
   top: calc(var(--index) * 4rem);
 }
+
+.bg-blur-navbar {
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  backdrop-filter: blur(10px); /* Blur effect */
+}
+
+/* Additional styling for the mobile hamburger menu */
+.hamburger-line {
+  width: 24px;
+  height: 2px;
+  background-color: white;
+  margin: 5px 0;
+}
+
+/* styles/global.css */
+.no-download {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+.rotate-x-45 {
+  transition: transform 1s ease-in-out, filter 1s ease-in-out;
+}
+
+.rotate-x-45:hover {
+  transform: rotateY(-50deg);
+  filter: grayscale(0);
+}
+
+html {
+  scroll-behavior: smooth;
+}

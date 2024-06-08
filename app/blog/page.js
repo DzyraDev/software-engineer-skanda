@@ -1,22 +1,9 @@
 // @flow strict
 
-import { personalData } from "@/utils/data/personal-data";
+import { blog } from "@/utils/data/blog"; // Import data from local file
 import BlogCard from "../components/homepage/blog/blog-card";
 
-async function getBlogs() {
-  const res = await fetch(`https://dev.to/api/articles?username=${personalData.devUsername}`)
-
-  if (!res.ok) {
-    throw new Error('Failed to fetch data')
-  }
-
-  const data = await res.json();
-  return data;
-};
-
-async function page() {
-  const blogs = await getBlogs();
-
+function Page() {
   return (
     <div className="py-8">
       <div className="flex justify-center my-5 lg:py-8">
@@ -30,15 +17,15 @@ async function page() {
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 md:gap-5 lg:gap-8 xl:gap-10">
-        {
-          blogs.map((blog, i) => (
-            blog?.cover_image &&
-            <BlogCard blog={blog} key={i} />
-          ))
-        }
+        {blog.map(
+          (blogItem) =>
+            blogItem?.cover_image && (
+              <BlogCard blog={blogItem} key={blogItem.id} />
+            )
+        )}
       </div>
     </div>
   );
-};
+}
 
-export default page;
+export default Page;

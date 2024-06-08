@@ -79,7 +79,15 @@ function ContactWithCaptcha() {
       </p>
       <div className="max-w-3xl text-white rounded-lg border border-[#464c6a] p-3 lg:p-5">
         <p className="text-sm text-[#d3d8e8]">
-          {"If you have any questions or concerns, please don't hesitate to contact me. I am open to any work opportunities that align with my skills and interests."}
+          {
+            "Hi, Jika kamu ingin bergabung dengan komunitas kami untuk bertanya dan sharing seputar Rekayasa Perangkat Lunak Silahkan bergabung ke "
+          }
+          <a href="#home" className="text-[#ee5048]">
+            grup whatsapp yang ada di halaman paling atas
+          </a>{" "}
+          {
+            "ya dan Jika anda mempunyai Karya/Portfolio yang masi seputaran Dengan Informatika bisa langsung kirim ke kontak yang tersedia ya seperti email di form bawah ini atau nomor whatsapp."
+          }
         </p>
         <div className="mt-6 flex flex-col gap-4">
           <div className="flex flex-col gap-2">
@@ -89,9 +97,11 @@ function ContactWithCaptcha() {
               type="text"
               maxLength="100"
               required={true}
-              onChange={(e) => setInput({ ...input, name: e.target.value })}
+              onChange={(e) =>
+                setInput({ ...input, from_name: e.target.value })
+              }
               onBlur={checkRequired}
-              value={input.name}
+              value={input.from_name}
             />
           </div>
 
@@ -109,9 +119,11 @@ function ContactWithCaptcha() {
                 setError({ ...error, email: !isValidEmail(input.email) });
               }}
             />
-            {error.email &&
-              <p className="text-sm text-red-400">Please provide a valid email!</p>
-            }
+            {error.email && (
+              <p className="text-sm text-red-400">
+                Please provide a valid email!
+              </p>
+            )}
           </div>
 
           <div className="flex flex-col gap-2">
@@ -132,11 +144,11 @@ function ContactWithCaptcha() {
             onChange={(code) => setCaptcha(code)}
           />
           <div className="flex flex-col items-center gap-2">
-            {error.required &&
+            {error.required && (
               <p className="text-sm text-red-400">
                 Email and Message are required!
               </p>
-            }
+            )}
             <button
               className="flex items-center gap-1 hover:gap-3 rounded-full bg-gradient-to-r from-pink-500 to-violet-600 px-5 md:px-12 py-2.5 md:py-3 text-center text-xs md:text-sm font-medium uppercase tracking-wider text-white no-underline transition-all duration-200 ease-out hover:text-white hover:no-underline md:font-semibold"
               role="button"
