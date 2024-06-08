@@ -7,6 +7,8 @@ import Navbar from "./components/navbar";
 import "./css/card.scss";
 import "./css/globals.scss";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/react";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -28,6 +30,7 @@ export default function RootLayout({ children }) {
       </body>
       <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM} />
       <SpeedInsights />
+      <Analytics />
     </html>
   );
 }
