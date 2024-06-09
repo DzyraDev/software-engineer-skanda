@@ -86,7 +86,7 @@ function ContactWithCaptcha() {
             grup whatsapp yang ada di halaman paling atas
           </a>{" "}
           {
-            "ya dan Jika anda mempunyai Karya/Portfolio yang masi seputaran Dengan Informatika bisa langsung kirim ke kontak yang tersedia ya seperti email di form bawah ini atau nomor whatsapp."
+            "ya dan Jika anda mempunyai Karya/Portfolio yang masi seputaran Dengan Informatika bisa langsung kirim ke kontak yang tersedia ya seperti email di form bawah ini atau nomor whatsapp agar bisa kami pamerkan di portfolio.."
           }
         </p>
         <div className="mt-6 flex flex-col gap-4">
